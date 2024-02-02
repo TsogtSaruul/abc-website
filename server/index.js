@@ -10,7 +10,7 @@ import mongoose from 'mongoose';
 const app = express();
 
 app.use(cors({
-    origin: ["https://abc-website-client.vercel.app/"],
+    origin: ["https://abc-website-client.vercel.app"],
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
     credentials: true
 }));

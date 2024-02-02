@@ -13,6 +13,13 @@ app.use(cors({
     origin: ['https://abc-website-client.vercel.app'],
     credentials: true, // Optional depending on your requirements
 }));
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://abc-website-client.vercel.app');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+});
 app.use(bodyParser.json({ limit: "30mb" }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use('/posts', postRoutes);

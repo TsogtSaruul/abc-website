@@ -9,7 +9,10 @@ import mongoose from 'mongoose';
 
 const app = express();
 
-
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://abc-website-client.vercel.app');
+  next();
+});
 app.use(cors({
     origin: '*',
     credentials: true,

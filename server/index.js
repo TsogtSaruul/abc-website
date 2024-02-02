@@ -9,6 +9,9 @@ import mongoose from 'mongoose';
 
 const app = express();
 
+app.get('/', (req, res) => {
+    res.send('APP IS RUNNING!')
+});
 app.use(cors({
     origin: ["https://abc-website-client.vercel.app"],
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
@@ -18,9 +21,7 @@ app.use(bodyParser.json({ limit: "30mb" }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use('/posts', postRoutes);
 app.use('/user', userRoutes);
-app.get('/', (req, res) => {
-    res.send('APP IS RUNNING!')
-});
+
 
 dotenv.config();
 const PORT = 5000;

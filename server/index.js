@@ -27,10 +27,11 @@ app.get('/', (req, res) => {
 dotenv.config();
 const PORT = 5000;
 
-mongoose.connect('mongodb+srv://Tsogt:UZGHqXbYKSYiu7Vg@mydb.vwlgrb8.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://Tsogt:UZGHqXbYKSYiu7Vg@mydb.vwlgrb8.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => app.listen(PORT, () => 
     console.log(`Server is running on port: http://localhost:${PORT}`)))
     .catch((error) => console.log(`${error} did not connect!`));
+mongoose.set('useFindAndModify', false);
 
 export default app;
 

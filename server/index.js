@@ -11,6 +11,7 @@ const app = express();
 
 app.use(cors({
     origin: ['https://abc-website-client.vercel.app'],
+    methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
     credentials: true, // Optional depending on your requirements
 }));
 app.use((req, res, next) => {

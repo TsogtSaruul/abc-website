@@ -9,6 +9,12 @@ import mongoose from 'mongoose';
 
 const app = express();
 
+
+app.use(cors({
+    origin: ['https://abc-website-client.vercel.app'],
+    methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
+    credentials: true, // Optional depending on your requirements
+}));
 app.use(function (req, res, next) {
     //Enabling CORS
     res.header("Access-Control-Allow-Origin", "*");
@@ -17,12 +23,6 @@ app.use(function (req, res, next) {
     Accept, x-client-key, x-client-token, x-client-secret, Authorization");
       next();
 });
-app.use(cors({
-    origin: ['https://abc-website-client.vercel.app'],
-    methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
-    credentials: true, // Optional depending on your requirements
-}));
-
 // app.use((req, res, next) => {
 //     req.setHeader('Access-Control-Allow-Origin', 'https://abc-website-client.vercel.app');
 //     req.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');

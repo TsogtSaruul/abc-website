@@ -39,33 +39,33 @@ const Post = () => {
 				<div className="postDetails-post-card">
 					<div className='postDetails-post'>
 						<div className='postDetails-post-image-container'>
-							<img src={post?.selectedFile} alt={post?.drink} />
+							<img src={post?.data?.selectedFile} alt={post?.data?.drink} />
 						</div>
 						
 						<div>
-							<p><b>Created by: </b>{post?.name}</p><br />
+							<p><b>Created by: </b>{post?.data?.name}</p><br />
 							
-							<h2><b>Drink: </b>{post?.drink}</h2><br />
+							<h2><b>Drink: </b>{post?.data?.drink}</h2><br />
 
-							<p><b>Category: </b>{post?.category}</p>
+							<p><b>Category: </b>{post?.data?.category}</p>
 
-							<p><b>Alcoholic: </b>{post?.alcoholic}</p>
+							<p><b>Alcoholic: </b>{post?.data?.alcoholic}</p>
 
-							<p><b>Glass: </b>{post?.glass}</p>
+							<p><b>Glass: </b>{post?.data?.glass}</p>
 
-							<p><b>Instruction: </b> {post?.instructions}</p>
+							<p><b>Instruction: </b> {post?.data?.instructions}</p>
 									
-							<p><b>Ingredients: </b> {post?.ingredient1}, {post?.ingredient2}, {post?.ingredient3}</p>
+							<p><b>Ingredients: </b> {post?.data?.ingredient1}, {post?.data?.ingredient2}, {post?.data?.ingredient3}</p>
 							
-							<p><b>Measure: </b>{post?.measure}</p>
+							<p><b>Measure: </b>{post?.data?.measure}</p>
 
-							<p><b>Likes: </b>{post?.likes?.length}</p>
+							<p><b>Likes: </b>{post?.data?.likes?.length}</p>
 							
-							<p><b>Created at: </b> {moment(post?.createdAt).fromNow()}</p>
+							<p><b>Created at: </b> {moment(post?.data?.createdAt).fromNow()}</p>
 						</div>
 					</div>
 
-					<Comments post={post} />
+					<Comments post={post?.data} />
 				</div>
 			</div>
 

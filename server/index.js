@@ -9,7 +9,10 @@ import mongoose from 'mongoose';
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: ['https://abc-website-client.vercel.app'],
+    credentials: true, // Optional depending on your requirements
+}));
 app.use(bodyParser.json({ limit: "30mb" }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use('/posts', postRoutes);

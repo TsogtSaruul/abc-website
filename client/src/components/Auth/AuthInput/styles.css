@@ -1,0 +1,60 @@
+* , ::after, ::before {
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+
+.authInput-container {
+    width: 100%;
+}
+
+.authInput-input-label {
+    text-align: left;
+    font-size: 22px;
+}
+
+.authInput-input-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.authInput-input {
+    width: 100%;
+    display: inline-block;
+    padding: 16px;
+    border: 2px solid gray;
+    border-radius: 8px;
+    margin: 8px 0;
+    background-color: #eeeeee;
+    font-size: 20px;
+}
+
+.authInput-input:hover {
+    background-color: aqua;
+}
+
+.authInput-input-button {
+    width: auto;
+    display: inline-block;
+    padding: 16px;
+    border: 2px solid gray;
+    border-radius: 8px;
+    margin: 8px 0 8px 8px;
+    cursor: pointer;
+}
+
+.authInput-input-button:hover {
+    background-color: aqua;
+}
+
+
+
+
+
+
+
+
+

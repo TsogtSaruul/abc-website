@@ -28,4 +28,6 @@ mongoose.connect('mongodb+srv://Tsogt:UZGHqXbYKSYiu7Vg@mydb.vwlgrb8.mongodb.net/
     console.log(`Server is running on port: http://localhost:${PORT}`)))
     .catch((error) => console.log(`${error} did not connect!`));
 
+export default app;
+
 

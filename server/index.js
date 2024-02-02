@@ -9,18 +9,7 @@ import mongoose from 'mongoose';
 
 const app = express();
 
-app.use(cors({
-    
-    origin: 'https://abc-website-client.vercel.app',
-    credentials: true,
-    optionSuccessStatus: 200
-}));
-
-app.use(function (request, response, next) {
-  response.header("Access-Control-Allow-Origin", "*");
-  response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+app.use(cors({}));
 
 app.use(bodyParser.json({ limit: "30mb" }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));

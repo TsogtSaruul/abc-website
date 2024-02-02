@@ -23,17 +23,7 @@ app.use(function (req, res, next) {
     Accept, x-client-key, x-client-token, x-client-secret, Authorization");
       next();
 });
-// app.use((req, res, next) => {
-//     req.setHeader('Access-Control-Allow-Origin', 'https://abc-website-client.vercel.app');
-//     req.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-//     req.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-//     req.setHeader('Access-Control-Allow-Credentials', true);
-//     res.setHeader('Access-Control-Allow-Origin', 'https://abc-website-client.vercel.app');
-//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-//     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-//     res.setHeader('Access-Control-Allow-Credentials', true);
-//     next();
-// });
+
 app.use(bodyParser.json({ limit: "30mb" }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use('/posts', postRoutes);

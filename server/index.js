@@ -10,7 +10,11 @@ import mongoose from 'mongoose';
 const app = express();
 
 
-app.use(cors());
+app.use(cors({
+    origin: '*',
+    credentials: true,
+    optionSuccessStatus: 200
+}));
 
 app.use(bodyParser.json({ limit: "30mb" }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));

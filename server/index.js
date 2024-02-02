@@ -10,7 +10,7 @@ import mongoose from 'mongoose';
 const app = express();
 
 app.use(cors({
-    origin: [],
+    origin: [""],
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
     credentials: true
 }));

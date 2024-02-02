@@ -14,7 +14,7 @@ app.use((req, res, next) => {
   next();
 });
 app.use(cors({
-    origin: '*',
+    origin: 'https://abc-website-client.vercel.app',
     credentials: true,
     optionSuccessStatus: 200
 }));

@@ -48,7 +48,7 @@ const Comments = ({ post }) => {
 			
 			<h2>Comments</h2>
 
-			<p>{comments.length === 0 ? 'No comment at the moment...' : null}</p>
+			<p>{comments?.length === 0 ? 'No comment at the moment...' : null}</p>
 
 			{comments?.map((comment, index) => (
 				<div 
